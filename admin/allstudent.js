@@ -565,6 +565,26 @@ document.addEventListener("DOMContentLoaded", () => {
             </div>
             
           </div>
+                
+          <p class="mb-1 fs-5 text-left fw-bold text-uppercase">Name and Address of Person to be contacted in case of Emergency</p>
+          <div class="d-flex justify-content-around mb-3">
+            <div class="w-50">
+     
+              <p class="mb-1"><strong>Full name:</strong> ${
+                studentInfo.fullname
+              }</p>
+              <p class="mb-1"><strong>Address:</strong> ${
+                studentInfo.caddress
+              }</p>
+              <p class="mb-1"><strong>Relation:</strong> ${
+                studentInfo.rel
+              }</p>
+            <p class="mb-1"><strong>Contact Number:</strong> ${
+              studentInfo.cpnum
+            }</p>
+            </div>
+    
+          </div>
 
           
           <p class="mb-1 fs-5 text-center fw-bold text-uppercase">Learners Education Background</p>

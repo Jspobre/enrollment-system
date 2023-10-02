@@ -237,9 +237,9 @@ document.addEventListener("DOMContentLoaded", () => {
         doc.text(`School Address:`, 20, 228);
         doc.text(`Year of Completion:`, 20, 236);
         doc.setFontStyle("normal");
-        doc.text(schname, 65, 220);
-        doc.text(schaddress, 65, 228);
-        doc.text(yrcomp, 65, 236);
+        // doc.text(schnamej, 65, 220);
+        // doc.text(schaddressj, 65, 228);
+        // doc.text(yrcompj, 65, 236);
 
         doc.text(`Date submitted: ${date}`, 20, 276);
 
