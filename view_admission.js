@@ -69,6 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const downloadBtn = document.getElementById("download-btn");
 
   const fetchEnrollData = () => {
+    const headerText = "Your Header Text HereOur Lady of the Roses Montessori Learning Center"; // Define your header text
+    const logoImage = "logo.png"; // Path to your logo image
+  
     fetch("./view_admission_download.php", {
       method: "GET",
       headers: {
@@ -125,12 +128,13 @@ document.addEventListener("DOMContentLoaded", () => {
         const convertedHeight = `${(height / 12).toFixed(0)}"${height % 12}`;
 
         let doc = new jsPDF();
-
+        
         doc.setFontSize(14);
         doc.setFontStyle("bold");
-        doc.text(`ENROLLMENT FORM`, 83, 20);
+        doc.text(`Our Lady of the Roses Montessori Learning Center`, 43, 15);
         doc.setFontStyle("normal");
-        doc.text(`Personal Information`, 85, 28);
+        doc.text(`Enrollment Form`, 85, 28);
+        
 
         doc.setFontSize(12);
         // Set the font style to bold for labels
@@ -226,9 +230,9 @@ document.addEventListener("DOMContentLoaded", () => {
         doc.text(`School Address:`, 20, 196);
         doc.text(`Year of Completion:`, 20, 204);
         doc.setFontStyle("normal");
-        doc.text(schname, 65, 188);
-        doc.text(schaddress, 65, 196);
-        doc.text(yrcomp, 65, 204);
+        doc.text(schnamej, 65, 188);
+        doc.text(schaddressj, 65, 196);
+        doc.text(yrcompj, 65, 204);
 
         doc.text("Junior High School", 85, 212);
         // Set the font style to bold for labels

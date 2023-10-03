@@ -177,14 +177,12 @@ h3,h6{
 
     </div>
 
-
-    <!-- Modal for displaying student details -->
-<div class="modal fade " id="studentDetailsModal" tabindex="-1" role="dialog" aria-labelledby="studentDetailsModalLabel" aria-hidden="true">
+    <div class="modal fade " id="studentDetailsModal" tabindex="-1" role="dialog" aria-labelledby="studentDetailsModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
     <div class="modal-content">
-      <div class="modal-header d-flex justify-content-center ">
-        <h5 class="modal-title fs-3 text-dark" id="studentDetailsModalLabel">Student Details</h5>
-        
+      <div class="modal-header d-flex justify-content-center" style="background-color: steelblue;">
+        <img src="logo.png" alt="Logo" class="logo-img" width="100" height="50">
+        <h5 class="modal-title fs-3 text-white" id="studentDetailsModalLabel" style="margin-left: 10px;">Our Lady of the Roses Montessori Learning Center</h5>
       </div>
       <div class="modal-body container-fluid">
       </div>
@@ -194,9 +192,6 @@ h3,h6{
     </div>
   </div>
 </div>
-
-
-
 
 
 
