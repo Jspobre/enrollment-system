@@ -109,6 +109,17 @@ h3,h6{
                                         <button class="btn btn-outline-primary filter-btn filter-strand-btn mb-2" data-filter="Computer System Servicing">Computer System Servicing</button>
                                 </div>
                             </div>
+                            <!-- <div class="mb-2 col-md-10">
+    <label for="filterdropdown" class="form-label">Select Strand</label>
+    <select id="filterdropdown" class="form-select">
+        <option value="General Academic Strand (GAS)">General Academic Strand (GAS)</option>
+        <option value="Humanitites and Social Sciences (HUMMS)">Humanitites and Social Sciences (HUMMS)</option>
+        <option value="Automotive Servicing">Automotive Servicing</option>
+        <option value="Electrical Installation and Maintenance">Electrical Installation and Maintenance</option>
+        <option value="Computer System Servicing">Computer System Servicing</option>
+    </select>
+</div> -->
+
                     </div>
                     <div class="row">
                         <div class="col-md-3">
@@ -182,6 +193,7 @@ h3,h6{
     <div class="modal-content">
       <div class="modal-header d-flex justify-content-center" style="background-color: steelblue;">
         <img src="logo.png" alt="Logo" class="logo-img" width="100" height="50">
+
         <h5 class="modal-title fs-3 text-white" id="studentDetailsModalLabel" style="margin-left: 10px;">Our Lady of the Roses Montessori Learning Center</h5>
       </div>
       <div class="modal-body container-fluid">

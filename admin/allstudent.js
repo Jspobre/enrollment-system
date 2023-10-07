@@ -83,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Reusable function for handling filter buttons
+  // Reusable function for handling filter buttonsHumanities
   function handleFilterButtons(btns, filterType) {
     btns.forEach((btn) => {
       btn.addEventListener("click", () => {
