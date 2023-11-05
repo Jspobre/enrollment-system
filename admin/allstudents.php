@@ -26,6 +26,8 @@ die("Connection failed: " . $conn->connect_error);
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.6/js/jquery.dataTables.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
     <script src="../plugins/popper.min.js"></script>
     
@@ -97,16 +99,16 @@ h3,h6{
                                 <div class="d-flex align-items-center">
                                     <button class="btn btn-outline-primary me-3 filter-btn filter-grade-btn mb-2" data-filter="Grade 11">Grade 11</button>
                                     <button class="btn btn-outline-primary filter-btn filter-grade-btn mb-2" data-filter="Grade 12">Grade 12</button>
-                                    <button class="btn btn-outline-primary filter-btn filter-grade-btn mb-2" data-filter="Grade 12">Grade 12</button>
+                                    <button class="btn btn-outline-primary filter-btn filter-grade-btn mb-2" data-filter="Grade 12">Grade 1</button>
                                 </div>
                             </div>
                             <div class="mb-2 col-md-10">
                                 <p class="mb-0">Select Strand</p>
-                             <div class="dropdown">
-    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        Select a Strand
+                                <div class="dropdown">
+    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="strandDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        General Academic Strand (GAS)
     </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <div class="dropdown-menu" aria-labelledby="strandDropdown">
         <button class="dropdown-item filter-btn filter-strand-btn" data-filter="General Academic Strand (GAS)">General Academic Strand (GAS)</button>
         <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Humanities and Social Sciences (HUMMS)">Humanities and Social Sciences (HUMMS)</button>
         <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Automotive Servicing">Automotive Servicing</button>
@@ -114,6 +116,17 @@ h3,h6{
         <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Computer System Servicing">Computer System Servicing</button>
     </div>
 </div>
+
+<script>
+    $(document).ready(function () {
+        $("#strandDropdown + .dropdown-menu .dropdown-item").click(function () {
+            var selectedText = $(this).text();
+            $("#strandDropdown").text(selectedText);
+        });
+    });
+</script>
+
+
 
                             </div>
                             <!-- <div class="mb-2 col-md-10">
@@ -138,12 +151,29 @@ h3,h6{
                         </div>
                         <div class="col-md-9 hidden class-filter-btns">
                             <p class="mb-0">Select Sections</p>
-                            <div>
-                                <button class="btn btn-outline-success class me-3" data-filter="A">Section A</button>
-                                <button class="btn btn-outline-success class me-3" data-filter="B">Section B</button>
-                                <button class="btn btn-outline-success class me-3" data-filter="C">Section C</button>
-                                <button class="btn btn-outline-success class me-3" data-filter="D">Section D</button>
-                            </div>
+    
+    <div class="dropdown">
+    <button class="btn btn-outline-success dropdown-toggle" type="button" id="sectionDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select a Section
+    </button>
+    <div class="dropdown-menu" aria-labelledby="sectionDropdown">
+        <button class="dropdown-item class" data-filter="A">Section A</button>
+        <button class="dropdown-item class" data-filter="B">Section B</button>
+        <button class="dropdown-item class" data-filter="C">Section C</button>
+        <button class="dropdown-item class" data-filter="D">Section D</button>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#sectionDropdown + .dropdown-menu .dropdown-item").click(function () {
+            var selectedText = $(this).text();
+            $("#sectionDropdown").text(selectedText);
+        });
+    });
+</script>
+
+</div>
                         </div>
                     </div>
                 </div>

@@ -24,7 +24,7 @@
     </div>
 
     <div class="side-header">
-        <h5 style="margin: 10px 15px;" id="title">Hello, Admin</h5>
+        <h5 style="margin: 10px 15px;" id="title">OLRMSHS Admin</h5>
     </div>
 
     <hr style="border:1px solid; background-color:#2c2b2b; border-color:#3B3131;">
