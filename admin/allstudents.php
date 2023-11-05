@@ -97,17 +97,24 @@ h3,h6{
                                 <div class="d-flex align-items-center">
                                     <button class="btn btn-outline-primary me-3 filter-btn filter-grade-btn mb-2" data-filter="Grade 11">Grade 11</button>
                                     <button class="btn btn-outline-primary filter-btn filter-grade-btn mb-2" data-filter="Grade 12">Grade 12</button>
+                                    <button class="btn btn-outline-primary filter-btn filter-grade-btn mb-2" data-filter="Grade 12">Grade 12</button>
                                 </div>
                             </div>
                             <div class="mb-2 col-md-10">
                                 <p class="mb-0">Select Strand</p>
-                                <div class="d-flex align-items-center flex-wrap">
-                                        <button class="btn btn-outline-primary me-3 filter-btn filter-strand-btn mb-2" data-filter="General Academic Strand (GAS)">General Academic Strand (GAS)</button>
-                                        <button class="btn btn-outline-primary me-3 filter-btn filter-strand-btn mb-2" data-filter="Humanitites and Social Sciences (HUMMS)">Humanitites and Social Sciences (HUMMS)</button>
-                                        <button class="btn btn-outline-primary me-3 filter-btn filter-strand-btn mb-2" data-filter="Automotive Servicing">Automotive Servicing</button>
-                                        <button class="btn btn-outline-primary me-3 filter-btn filter-strand-btn mb-2" data-filter="Electrical Installation and Maintenance">Electrical Installation and Maintenance</button>
-                                        <button class="btn btn-outline-primary filter-btn filter-strand-btn mb-2" data-filter="Computer System Servicing">Computer System Servicing</button>
-                                </div>
+                             <div class="dropdown">
+    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Select a Strand
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="General Academic Strand (GAS)">General Academic Strand (GAS)</button>
+        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Humanities and Social Sciences (HUMMS)">Humanities and Social Sciences (HUMMS)</button>
+        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Automotive Servicing">Automotive Servicing</button>
+        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Electrical Installation and Maintenance">Electrical Installation and Maintenance</button>
+        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Computer System Servicing">Computer System Servicing</button>
+    </div>
+</div>
+
                             </div>
                             <!-- <div class="mb-2 col-md-10">
     <label for="filterdropdown" class="form-label">Select Strand</label>

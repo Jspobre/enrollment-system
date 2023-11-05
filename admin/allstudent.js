@@ -690,25 +690,25 @@ document.addEventListener("DOMContentLoaded", () => {
           <div class="form-check me-3">
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" value="A">
             <label class="form-check-label" for="flexRadioDefault1">
-              Class A
+              Section A
             </label>
           </div>
           <div class="form-check me-3">
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" value="B">
             <label class="form-check-label" for="flexRadioDefault2">
-              Class B
+              Section B
             </label>
           </div>
           <div class="form-check me-3">
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value="C">
             <label class="form-check-label" for="flexRadioDefault3">
-              Class C
+              Section C
             </label>
           </div>
           <div class="form-check">
             <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" value="D">
             <label class="form-check-label" for="flexRadioDefault4">
-              Class D
+              Section D
             </label>
           </div>
           
