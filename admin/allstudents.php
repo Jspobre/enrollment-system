@@ -96,11 +96,33 @@ h3,h6{
                     <div class="row">
                             <div class="mb-2 col-md-2">
                                 <p class="mb-0">Select Year Level</p>
-                                <div class="d-flex align-items-center">
-                                    <button class="btn btn-outline-primary me-3 filter-btn filter-grade-btn mb-2" data-filter="Grade 11">Grade 11</button>
-                                    <button class="btn btn-outline-primary filter-btn filter-grade-btn mb-2" data-filter="Grade 12">Grade 12</button>
-                                    <button class="btn btn-outline-primary filter-btn filter-grade-btn mb-2" data-filter="Grade 12">Grade 1</button>
-                                </div>
+                                <div class="dropdown-grade" >
+                            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="gradeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Select a Grade
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="gradeDropdown" >
+                                <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 1">Grade 1</button>
+                                <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 2">Grade 2</button>
+                                <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 3">Grade 3</button>
+                                <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 4">Grade 4</button>
+                                <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 5">Grade 5</button>
+                                <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 6">Grade 6</button>
+                                <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 11">Grade 11</button>
+                                <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 12">Grade 12</button>
+                            </div>
+                        </div>
+                        <script>
+                        $(document).ready(function () {
+                            // Set the initial text to "Grade 11"
+                            $("#gradeDropdown").text("Grade 11");
+
+                            // Handle click events to update the text
+                            $("#gradeDropdown + .dropdown-menu .dropdown-item").click(function () {
+                                var selectedText = $(this).text();
+                                $("#gradeDropdown").text(selectedText);
+                            });
+                        });
+                    </script>
                             </div>
                             <div class="mb-2 col-md-10">
                                 <p class="mb-0">Select Strand</p>

@@ -4,6 +4,7 @@
     justify-content: flex-end;
     width: 100%; 
     padding: 5px 10px;
+
 }
  
 .sidebar {
@@ -15,6 +16,7 @@
     left: 0;
     top: 0;
     transition: all 0.5s ease-in-out;
+    
 }
 
 .icons {
