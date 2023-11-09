@@ -94,37 +94,27 @@ h3,h6{
             <!-- FILTER BUTTONS FOR DISPLAY -->
                 <div class="filter-btn-container container-fluid mb-3">
                     <div class="row">
-                            <div class="mb-2 col-md-2">
-                                <p class="mb-0">Select Year Level</p>
-                                <div class="dropdown-grade" >
-                            <button class="btn btn-outline-primary dropdown-toggle" type="button" id="gradeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Select a Grade
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="gradeDropdown" >
-                                <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 1">Grade 1</button>
-                                <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 2">Grade 2</button>
-                                <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 3">Grade 3</button>
-                                <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 4">Grade 4</button>
-                                <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 5">Grade 5</button>
-                                <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 6">Grade 6</button>
-                                <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 11">Grade 11</button>
-                                <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 12">Grade 12</button>
-                            </div>
-                        </div>
-                        <script>
-                        $(document).ready(function () {
-                            // Set the initial text to "Grade 11"
-                            $("#gradeDropdown").text("Grade 11");
+                  <!-- ... Your existing HTML code ... -->
 
-                            // Handle click events to update the text
-                            $("#gradeDropdown + .dropdown-menu .dropdown-item").click(function () {
-                                var selectedText = $(this).text();
-                                $("#gradeDropdown").text(selectedText);
-                            });
-                        });
-                    </script>
-                            </div>
-                            <div class="mb-2 col-md-10">
+<div class="mb-2 col-md-2">
+    <p class="mb-0">Select Year Level</p>
+    <div class="dropdown-grade">
+        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="gradeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select a Grade
+        </button>
+        <div class="dropdown-menu" aria-labelledby="gradeDropdown">
+            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 1">Grade 1</button>
+            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 2">Grade 2</button>
+            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 3">Grade 3</button>
+            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 4">Grade 4</button>
+            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 5">Grade 5</button>
+            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 6">Grade 6</button>
+            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 11">Grade 11</button>
+            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 12">Grade 12</button>
+        </div>
+    </div>
+</div>
+<div class="mb-2 col-md-10">
                                 <p class="mb-0">Select Strand</p>
                                 <div class="dropdown">
     <button class="btn btn-outline-primary dropdown-toggle" type="button" id="strandDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -151,6 +141,30 @@ h3,h6{
 
 
                             </div>
+
+<script>
+    $(document).ready(function () {
+        // Set the initial text to "Grade 11"
+        $("#gradeDropdown").text("Grade 11");
+
+        // Handle click events to update the text and toggle the "Select Strand" dropdown visibility
+        $("#gradeDropdown + .dropdown-menu .dropdown-item").click(function () {
+            var selectedText = $(this).text();
+            $("#gradeDropdown").text(selectedText);
+
+            if (selectedText === "Grade 11" || selectedText === "Grade 12") {
+                $("#strandDropdown").show();
+            } else {
+                $("#strandDropdown").hide();
+            }
+        });
+    });
+</script>
+
+<!-- ... Your existing HTML code ... -->
+
+                            </div>
+        
                             <!-- <div class="mb-2 col-md-10">
     <label for="filterdropdown" class="form-label">Select Strand</label>
     <select id="filterdropdown" class="form-select">

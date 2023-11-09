@@ -85,6 +85,12 @@
     </div>
 </nav>
     <div class="container" style="padding-bottom: 30px">
+    <div class="progress my-3">
+    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        0%
+    </div>
+</div>
+
         <form method="POST" action="./eform_process.php" enctype="multipart/form-data">
             <div class="row ">
                 <div class="row">
@@ -93,6 +99,7 @@
                         <h3 class="text-center">Our Lady of the Roses Montessori Learning Center</h3></div>
                     </div>
                 </div>
+                <fieldset id="fieldset1" >
                 <div class="row my-3">
                     <div class="col-lg-12"> 
                         <label for="formControlInput" class="form-label">Learner Reference Number</label>
@@ -180,55 +187,14 @@
                 </div>
                 <div class="row">
                 <div class="col-sm-12 col-lg-3 my-2"> 
-                        <!-- <label for="province" class="form-label">Province</label>
-                        <select class="form-select form-control " aria-label="Large select" name="province" id="province" onchange="handleProvinceChange(event)">
-                            <option disabled selected>Select</option>  
-                            <option value="Albay" >Albay</option> 
-                            <option value="Camarines Sur" >Camarines Sur</option> 
-                        </select> -->
                          <label for="province" class="form-label">Province</label>
                         <input type="text" class="form-control" id="province" name="province" placeholder="Enter province" required>
                     </div>
                     <div class="col-sm-12 col-lg-3 my-2"> 
-                        <!-- <label for="municipality" class="form-label">Municipality</label>
-                        <select class="form-select form-control " aria-label="Large select" name="municipality" id="municipality" onchange="handleMunicipalityChange(event)">
-                            <option disabled value="" selected>Select Municipality</option>  
-                            <option value="Oas" class="albay d-none">Oas</option> 
-                            <option value="Ligao" class="albay d-none">Ligao</option> 
-                            <option value="Polangui" class="albay d-none">Polangui</option>
-                            <option value="Baao" class="camsur d-none">Baao</option>
-                            <option value="Bato" class="camsur d-none">Bato</option>
-                            <option value="Iriga" class="camsur d-none">Iriga</option>
-                            <option value="Pili" class="camsur d-none">Pili</option>
-                        </select> -->
                         <label for="municipality" class="form-label">Municipality</label>
                         <input type="text" class="form-control" id="municipality" name="municipality" placeholder="Enter municipality" required>
                     </div>
                     <div class="col-sm-12 col-lg-3 my-2"> 
-                        <!-- <label for="brgy" class="form-label">Barangay</label>
-                        <select class="form-select form-control " aria-label="Large select" name="brgy" id="brgy">
-                            <option disabled value="" selected>Select</option>  
-                            <option value="Bagumbayan" class="oas d-none">Bagumbayan</option> 
-                            <option value="Bongoran" class="oas d-none">Bongoran</option> 
-                            <option value="Calzada" class="oas d-none">Calzada</option> 
-                            <option value="Centro Poblacion" class="oas d-none">Centro Poblacion</option> 
-                            <option value="Ilaor Norte" class="oas d-none">Ilaor Norte</option>
-                            <option value="Ilaor Sur" class="oas d-none">Ilaor Sur</option>
-                            <option value="Iraya Norte" class="oas d-none">Iraya Norte</option>
-                            <option value="Iraya Sur" class="oas d-none">Iraya Sur</option>
-                            <option value="Maporong" class="oas d-none">Maporong</option>
-                            <option value="Obaliw" class="oas d-none">Obaliw</option>
-                            <option value="Rizal" class="oas d-none">Rizal</option> 
-                            <option value="San Juan" class="oas d-none">San Juan</option>
-                            <option value="Talongog" class="oas d-none">Talongog</option>
-                            <option value="Bagumbayan" class="ligao d-none">Bagumbayan</option>
-                            <option value="Binatagan" class="ligao d-none">Binatagan</option>
-                            <option value="Guilid" class="ligao d-none">Guilid</option>
-                            <option value="Tinago" class="ligao d-none">Tinago</option>
-                            <option value="Tomolin" class="ligao d-none">Tomolin</option>
-                            <option value="Sta. Cruz" class="ligao d-none">Sta. Cruz</option>
-                            <option value="Basud" class="polangui d-none">Basud</option>
-                        </select> -->
                         <label for="brgy" class="form-label">Barangay</label>
                         <input type="text" class="form-control" id="brgy" name="brgy" placeholder="Enter barangay" required>
                     </div>
@@ -238,84 +204,18 @@
                     </div>
                 </div>
                 <br>
+                <div>
+                <button type="submit "class="btn btn-success mx-auto d-flex px-5 text-uppercase" id="next" name="submit"> Next </button>
+                </div>
+        
+
+                </fieldset>
+
                 <hr>
                 <br>
-                <div class="row">
-                    <div class="col-sm-12 col-lg-4 my-2"> 
-                        <label for="glevel" class="form-label">Grade Level</label>
-                        <select class="form-select form-control " aria-label="Large select" name="grlevel" id="grlevel" required>
-                            <option disabled selected>Select</option>  
-                            <option value="Grade 11" >Grade 11</option> 
-                            <option value="Grade 12" >Grade 12</option> 
-                        </select>
-                    </div>
-                    <div class="col-sm-12 col-lg-4 my-2">
-                        <label for="track" class="form-label">Track</label>
-                        <select class="form-select form-control " aria-label="Large select" name="track" id="track" onchange="handleTrackChange(event)"  required> 
-                            <!-- <option  disabled>Select Track</option>  -->
-                            <option disabled selected>Select</option> 
-                            <option value="Academic Track">Academic Track</option>  
-                            <option value="Tech-Voc Track">Tech-Voc Track</option> 
-                        </select>
-                    </div>  
-                    <div class="col-sm-12 col-lg-4 my-2">
-                        <label for="strand" class="form-label">Strand</label>
-                        <select class="form-select form-control " aria-label="Large select" name="strand" id="strand"  required> 
-                            <option disabled selected>Select</option> 
-                            <option class="strand" value="General Academic Strand (GAS)" >General Academic Strand (GAS)</option> 
-                            <option class="strand" value="Humanities and Social Sciences (HUMMS)">Humanities and Social Sciences (HUMMS)</option>  
-                            <option class="track d-none" value="Automotive Servicing" >Automotive Servicing</option> 
-                            <option class="track d-none" value="Electrical Installation and Maintenance">Electrical Installation and Maintenance</option> 
-                            <option class="track d-none" value="Computer System Servicing">Computer System Servicing</option> 
-                        </select>
-                    </div>  
-                </div>
 
-                <div class="colapse" id="collapseContent">
-                <div class="card card-body">
-                <p>Since you are an incoming Grade 11 student, there are important documents needed.<br>Please upload the following documents in pdf form.</p>
-                <div class="row">
-                    <div class="col-3 my-2 ">
-                <label for="complform" class="form-label">Completion Form / Certificate JHS</label>
-                    </div>
-                    <div class="col">
-                            <input type="file" name="complform" id="complform">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-3 my-2 ">
-                <label for="pics" class="form-label">1x1 picture</label>
-                    </div>
-                    <div class="col">
-                            <input type="file" name="pics" id="pics">
-                    </div>
-                </div>
 
-        </div>
-                </div>
-
-                <br>
-                <div class="row">
-                    <div class="col-3 my-2 ">
-                <label for="psa" class="form-label">PSA/NSO Birth Certificate</label>
-                    </div>
-                    <div class="col">
-                            <input type="file" name="psa" id="psa" required>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-3 my-2 ">
-                <label for="formcard" class="form-label">Form 138</label>
-                    </div>
-                    <div class="col">
-                            <input type="file" name="formcard" id="formcard" required>
-                    </div>
-                </div>
-
-                <br>
-                <hr>
-                <br>
+                <fieldset id="fieldset2" style="display: none;">
                 <h5>Name and Address of Person to be contacted in case of Emergency</h5>
                 <div class="row my-3">
                     <div class="col-sm-12 col-lg-3 my-2"> 
@@ -370,7 +270,96 @@
                         <input type="number" class="form-control" id="yrcompj" name="yrcompj" placeholder="Enter Year of Completion" required>
                     </div>
                 </div> 
-                <button type="submit "class="btn btn-success mx-auto d-flex px-5 text-uppercase" id="next" name="submit"> Submit </button>
+                <div class="row">
+                <div class="col">
+                    <button type="submit" class="btn btn-success mx-auto d-flex px-5 text-uppercase" id="previous" name="submit">Previous</button>
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-success mx-auto d-flex px-5 text-uppercase" id="next" name="submit">Next</button>
+                </div>
+          
+            </div>
+
+    
+
+                </fieldset>
+                <hr>
+
+
+                <fieldset id="fieldset3" style="display: none;">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-4 my-2"> 
+                        <label for="glevel" class="form-label">Grade Level</label>
+                        <select class="form-select form-control " aria-label="Large select" name="grlevel" id="grlevel" required>
+                            <option disabled selected>Select</option>  
+                            <option value="Grade 11" >Grade 11</option> 
+                            <option value="Grade 12" >Grade 12</option> 
+                        </select>
+                    </div>
+                    <div class="col-sm-12 col-lg-4 my-2">
+                        <label for="track" class="form-label">Track</label>
+                        <select class="form-select form-control " aria-label="Large select" name="track" id="track" onchange="handleTrackChange(event)"  required> 
+                            <!-- <option  disabled>Select Track</option>  -->
+                            <option disabled selected>Select</option> 
+                            <option value="Academic Track">Academic Track</option>  
+                            <option value="Tech-Voc Track">Tech-Voc Track</option> 
+                        </select>
+                    </div>  
+                    <div class="col-sm-12 col-lg-4 my-2">
+                        <label for="strand" class="form-label">Strand</label>
+                        <select class="form-select form-control " aria-label="Large select" name="strand" id="strand"  required> 
+                            <option disabled selected>Select</option> 
+                            <option class="strand" value="General Academic Strand (GAS)" >General Academic Strand (GAS)</option> 
+                            <option class="strand" value="Humanities and Social Sciences (HUMMS)">Humanities and Social Sciences (HUMMS)</option>  
+                            <option class="track d-none" value="Automotive Servicing" >Automotive Servicing</option> 
+                            <option class="track d-none" value="Electrical Installation and Maintenance">Electrical Installation and Maintenance</option> 
+                            <option class="track d-none" value="Computer System Servicing">Computer System Servicing</option> 
+                        </select>
+                    </div>  
+                </div>
+
+                <div class="colapse" id="collapseContent">
+                <div class="card card-body">
+                <p>Since you are an incoming Grade 11 student, there are important documents needed.<br>Please upload the following documents in pdf form.</p>
+                <div class="row">
+                    <div class="col-3 my-2 ">
+                <label for="complform" class="form-label">Completion Form / Certificate JHS</label>
+                    </div>
+                    <div class="col">
+                            <input type="file" name="complform" id="complform">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-3 my-2 ">
+                <label for="pics" class="form-label">1x1 picture</label>
+                    </div>
+                    <div class="col">
+                            <input type="file" name="pics" id="pics">
+                    </div>
+                </div>
+
+             </div>
+                </div>
+
+                <br>
+                <div class="row">
+                    <div class="col-3 my-2 ">
+                <label for="psa" class="form-label">PSA/NSO Birth Certificate</label>
+                    </div>
+                    <div class="col">
+                            <input type="file" name="psa" id="psa" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-3 my-2 ">
+                <label for="formcard" class="form-label">Form 138</label>
+                    </div>
+                    <div class="col">
+                            <input type="file" name="formcard" id="formcard" required>
+                    </div>
+                </div>
+                </fieldset>
             </div>
         </form>
     </div>
@@ -497,7 +486,57 @@
 
         // Hide collapse content initially
         collapseContent.style.display = 'none';
+   
 
+    function nextStep(step) {
+        const currentFieldset = document.getElementById('fieldset' + step);
+        const nextFieldset = document.getElementById('fieldset' + (step + 1));
+        const progressBar = document.querySelector('.progress-bar');
+
+        // Your logic to validate fields and navigate to the next step
+
+        // Hide the current fieldset
+        if (currentFieldset) {
+            currentFieldset.style.display = 'none';
+
+            // Show the next fieldset
+            if (nextFieldset) {
+                nextFieldset.style.display = 'block';
+
+                // Update the progress bar
+                const totalSteps = 3;
+                const percent = (step / totalSteps) * 100;
+                progressBar.style.width = percent + '%';
+                progressBar.setAttribute('aria-valuenow', percent);
+            }
+
+            // If it's the last step, change the "Next" button to "Submit"
+            if (step === 2) {
+                document.getElementById('submitBtn').style.display = 'block';
+            }
+        }
+    }
+
+    document.getElementById('next').addEventListener('click', function() {
+    nextStep(1);  // assuming you want to move to the next step when the button is clicked
+
+
+    
+});
+
+
+function updateProgressBar(step, totalSteps) {
+        const progressBar = document.querySelector('.progress-bar');
+        const percent = (step / totalSteps) * 100;
+
+        // Update the width and text of the progress bar
+        progressBar.style.width = percent + '%';
+        progressBar.setAttribute('aria-valuenow', percent);
+        progressBar.innerText = percent + '%';
+    }
+
+    // Example: Update progress bar to 25% for the first step out of 4 steps
+    updateProgressBar(1, 4);
     
     </script>
 <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
