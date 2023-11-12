@@ -8,6 +8,8 @@ die("Connection failed: " . $conn->connect_error);
 ?>
 
 
+
+
 <!DOCTYPE html lang=en>
 <html>
 
@@ -26,8 +28,6 @@ die("Connection failed: " . $conn->connect_error);
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.11.6/js/jquery.dataTables.js"></script>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
 
     <script src="../plugins/popper.min.js"></script>
     
@@ -38,7 +38,6 @@ die("Connection failed: " . $conn->connect_error);
 <link rel="stylesheet" href="../css/bootstrap.css">
 <link rel="stylesheet" href="../css/styles.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
 
 
 <head>
@@ -96,23 +95,42 @@ h3,h6{
                     <div class="row">
                   <!-- ... Your existing HTML code ... -->
 
+
 <div class="mb-2 col-md-2">
+    <p class="mb-0">Select Educational Level</p>
+    <div class="btn-group">
+        <div>
+      <a href="allstudents.php" class="btn btn-primary">SHS</a> 
+        </div>
+        <div style="margin-left: 10px">
+     <a href="allstudents_elem.php" class="btn btn-primary">Elementary</a>
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+
+<div class="row">
+
+    
+<div class="mb-2 col-md-2">
+    
     <p class="mb-0">Select Year Level</p>
     <div class="dropdown-grade">
         <button class="btn btn-outline-primary dropdown-toggle" type="button" id="gradeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Select a Grade
         </button>
         <div class="dropdown-menu" aria-labelledby="gradeDropdown">
-            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 1">Grade 1</button>
-            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 2">Grade 2</button>
-            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 3">Grade 3</button>
-            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 4">Grade 4</button>
-            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 5">Grade 5</button>
-            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 6">Grade 6</button>
             <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 11">Grade 11</button>
             <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 12">Grade 12</button>
+     
+        
         </div>
     </div>
+
 </div>
 <div class="mb-2 col-md-10">
                                 <p class="mb-0">Select Strand</p>
@@ -138,9 +156,9 @@ h3,h6{
     });
 </script>
 
-
-
                             </div>
+</div>
+
 
 <script>
     $(document).ready(function () {
@@ -159,6 +177,54 @@ h3,h6{
             }
         });
     });
+    document.addEventListener("DOMContentLoaded", () => {
+    const grade1Button = document.getElementById("grade1Button");
+    const grade2Button = document.getElementById("grade2Button");
+    const grade3Button = document.getElementById("grade3Button");
+    const grade4Button = document.getElementById("grade4Button");
+    const grade5Button = document.getElementById("grade5Button");
+    const grade6Button = document.getElementById("grade6Button");
+
+    if (grade1Button) {
+        grade1Button.addEventListener("click", () => {
+            window.location.href = "allstudents_elem.php";
+        });
+    }
+
+    if (grade2Button) {
+        grade2Button.addEventListener("click", () => {
+            window.location.href = "allstudents_elem.php";
+        });
+    }
+
+    if (grade3Button) {
+        grade3Button.addEventListener("click", () => {
+            window.location.href = "allstudents_elem.php";
+        });
+    }
+
+    if (grade4Button) {
+        grade4Button.addEventListener("click", () => {
+            window.location.href = "allstudents_elem.php";
+        });
+    }
+
+    if (grade5Button) {
+        grade5Button.addEventListener("click", () => {
+            window.location.href = "allstudents_elem.php";
+        });
+    }
+
+    if (grade6Button) {
+        grade6Button.addEventListener("click", () => {
+            window.location.href = "allstudents_elem.php";
+        });
+    }
+
+    // ... other initialization code ...
+});
+
+
 </script>
 
 <!-- ... Your existing HTML code ... -->

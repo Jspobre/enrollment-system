@@ -38,6 +38,7 @@
             }
             h3{
                 padding-left: 8px;
+                font-weight: bold;
             }
         
         .form-control[type="number"]::-webkit-inner-spin-button,
@@ -85,11 +86,12 @@
     </div>
 </nav>
     <div class="container" style="padding-bottom: 30px">
-    <div class="progress my-3">
-    <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
-        0%
+    <div class="progress">
+    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+        <span class="progress-text"></span>
     </div>
 </div>
+
 
         <form method="POST" action="./eform_process.php" enctype="multipart/form-data">
             <div class="row ">
@@ -97,6 +99,12 @@
                     <div class="col-sm-12 flex-row flex-wrap d-flex align-items-center justify-content-center py-4 gap-3">
                         <img src="logo1.png"  style="width: 70px;">
                         <h3 class="text-center">Our Lady of the Roses Montessori Learning Center</h3></div>
+                    </div>
+                </div>
+                <div class="row ">
+                <div class="row">
+                    <div class="col-sm-12 flex-row flex-wrap d-flex align-items-center justify-content-center py-1 gap-2">
+                        <h4 class="text-center">Senior High School Registration Form</h4></div>
                     </div>
                 </div>
                 <fieldset id="fieldset1" >
@@ -153,7 +161,7 @@
                             <option selected="" disabled>Select status</option>
                             <option value="Single">Single</option>
                             <option value="Married">Married</option> 
-                            <option value="Seperated">Seperated</option>
+                            <option value="Seperated">Separated</option>
                             <option value="Divorced">Divorced</option>
                             <option value="Widowed">Widowed</option>
                         </select>
@@ -205,93 +213,23 @@
                 </div>
                 <br>
                 <div>
-                <button type="submit "class="btn btn-success mx-auto d-flex px-5 text-uppercase" id="next" name="submit"> Next </button>
+                <button type="submit "class="btn btn-success mx-auto d-flex px-5 text-uppercase" id="nextBtn" name="next">  Next </button>
                 </div>
         
 
                 </fieldset>
 
-                <hr>
+      
                 <br>
 
 
+           
                 <fieldset id="fieldset2" style="display: none;">
-                <h5>Name and Address of Person to be contacted in case of Emergency</h5>
-                <div class="row my-3">
-                    <div class="col-sm-12 col-lg-3 my-2"> 
-                        <label for="fullname" class="form-label">Full Name</label>
-                        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter Full Name" required>
-                    </div>
-                    <div class="col-sm-12 col-lg-3 my-2">
-                        <label for="caddress" class="form-label">Address</label>
-                        <input type="text" class="form-control" id="caddress" name="caddress" placeholder="Enter Address" required>
-                    </div>
-                    <div class="col-sm-12  col-lg-3 my-2">
-                        <label for="rel" class="form-label">Relation</label>
-                        <input type="text" class="form-control" id="rel" name="rel" placeholder="Enter Relation" required>
-                    </div>
-                    <div class="col-sm-12  col-lg-3 my-2">
-                        <label for="cpnum" class="form-label">Contact Number</label>
-                        <input type="number" class="form-control" id="cpnum" name="cpnum" placeholder="Enter contact number" required>
-                    </div>
-                </div>
-                <hr>
-                <br>
-                <h5>Learners Educational Background </h5>
-                <br>
-                <div class="row my-3">
-                    <center><h6>Elementary School (where you completed Elementary Level Education)</h6></center>
-                    <div class="col-sm-12 col-lg-4 my-2"> 
-                        <label for="schname" class="form-label">School Name</label>
-                        <input type="text" class="form-control" id="schname" name="schname" placeholder="Enter School Name" required>
-                    </div>
-                    <div class="col-sm-12 col-lg-4 my-2">
-                        <label for="schaddress" class="form-label">School Address</label>
-                        <input type="text" class="form-control" id="schaddress" name="schaddress" placeholder="Enter School Address" required>
-                    </div>
-                    <div class="col-sm-12  col-lg-3 my-2">
-                        <label for="yrcomp" class="form-label">Year of Completion</label>
-                        <input type="number" class="form-control" id="yrcomp" name="yrcomp" placeholder="Enter Year of Completion" required>
-                    </div>
-                </div>
-                <br>
-                <div class="row my-3">
-                    <center><h6>Junior High School (where you completed JHS / Grade 10)</h6></center>
-                    <div class="col-sm-12 col-lg-4 my-2"> 
-                        <label for="schnamej" class="form-label">School Name</label>
-                        <input type="text" class="form-control" id="schnamej" name="schnamej" placeholder="Enter School Name" required>
-                    </div>
-                    <div class="col-sm-12 col-lg-4 my-2">
-                        <label for="schaddressj" class="form-label">School Address</label>
-                        <input type="text" class="form-control" id="schaddressj" name="schaddressj" placeholder="Enter School Address" required>
-                    </div>
-                    <div class="col-sm-12  col-lg-3 my-2">
-                        <label for="yrcompj" class="form-label">Year of Completion</label>
-                        <input type="number" class="form-control" id="yrcompj" name="yrcompj" placeholder="Enter Year of Completion" required>
-                    </div>
-                </div> 
-                <div class="row">
-                <div class="col">
-                    <button type="submit" class="btn btn-success mx-auto d-flex px-5 text-uppercase" id="previous" name="submit">Previous</button>
-                </div>
-                <div class="col">
-                    <button type="submit" class="btn btn-success mx-auto d-flex px-5 text-uppercase" id="next" name="submit">Next</button>
-                </div>
-          
-            </div>
-
-    
-
-                </fieldset>
-                <hr>
-
-
-                <fieldset id="fieldset3" style="display: none;">
                 <div class="row">
                     <div class="col-sm-12 col-lg-4 my-2"> 
                         <label for="glevel" class="form-label">Grade Level</label>
                         <select class="form-select form-control " aria-label="Large select" name="grlevel" id="grlevel" required>
-                            <option disabled selected>Select</option>  
+                            <option disabled selected>Select</option>                   
                             <option value="Grade 11" >Grade 11</option> 
                             <option value="Grade 12" >Grade 12</option> 
                         </select>
@@ -359,7 +297,77 @@
                             <input type="file" name="formcard" id="formcard" required>
                     </div>
                 </div>
+        
+                <hr>
+                <h5>Name and Address of Person to be contacted in case of Emergency</h5>
+                <div class="row my-3">
+                    <div class="col-sm-12 col-lg-3 my-2"> 
+                        <label for="fullname" class="form-label">Full Name</label>
+                        <input type="text" class="form-control" id="fullname" name="fullname" placeholder="Enter Full Name" required>
+                    </div>
+                    <div class="col-sm-12 col-lg-3 my-2">
+                        <label for="caddress" class="form-label">Address</label>
+                        <input type="text" class="form-control" id="caddress" name="caddress" placeholder="Enter Address" required>
+                    </div>
+                    <div class="col-sm-12  col-lg-3 my-2">
+                        <label for="rel" class="form-label">Relation</label>
+                        <input type="text" class="form-control" id="rel" name="rel" placeholder="Enter Relation" required>
+                    </div>
+                    <div class="col-sm-12  col-lg-3 my-2">
+                        <label for="cpnum" class="form-label">Contact Number</label>
+                        <input type="number" class="form-control" id="cpnum" name="cpnum" placeholder="Enter contact number" required>
+                    </div>
+                </div>
+                <hr>
+                <br>
+                <h5>Learners Educational Background </h5>
+                <br>
+                <div class="row my-3">
+                    <center><h6>Elementary School (where you completed Elementary Level Education)</h6></center>
+                    <div class="col-sm-12 col-lg-4 my-2"> 
+                        <label for="schname" class="form-label">School Name</label>
+                        <input type="text" class="form-control" id="schname" name="schname" placeholder="Enter School Name" required>
+                    </div>
+                    <div class="col-sm-12 col-lg-4 my-2">
+                        <label for="schaddress" class="form-label">School Address</label>
+                        <input type="text" class="form-control" id="schaddress" name="schaddress" placeholder="Enter School Address" required>
+                    </div>
+                    <div class="col-sm-12  col-lg-3 my-2">
+                        <label for="yrcomp" class="form-label">Year of Completion</label>
+                        <input type="number" class="form-control" id="yrcomp" name="yrcomp" placeholder="Enter Year of Completion" required>
+                    </div>
+                </div>
+                <br>
+                <div class="row my-3">
+                    <center><h6>Junior High School (where you completed JHS / Grade 10)</h6></center>
+                    <div class="col-sm-12 col-lg-4 my-2"> 
+                        <label for="schnamej" class="form-label">School Name</label>
+                        <input type="text" class="form-control" id="schnamej" name="schnamej" placeholder="Enter School Name" required>
+                    </div>
+                    <div class="col-sm-12 col-lg-4 my-2">
+                        <label for="schaddressj" class="form-label">School Address</label>
+                        <input type="text" class="form-control" id="schaddressj" name="schaddressj" placeholder="Enter School Address" required>
+                    </div>
+                    <div class="col-sm-12  col-lg-3 my-2">
+                        <label for="yrcompj" class="form-label">Year of Completion</label>
+                        <input type="number" class="form-control" id="yrcompj" name="yrcompj" placeholder="Enter Year of Completion" required>
+                    </div>
+                </div> 
+                <div class="row">
+                    <div class="col">
+                        <button type="submit" class="btn btn-success mx-auto d-flex px-5 text-uppercase" id="previousBtn" name="previous">Previous</button>
+                    </div>
+                    <div class="col">
+                        <button type="submit" class="btn btn-success mx-auto d-flex px-5 text-uppercase" id="submitBtn" name="submit">Submit</button>
+                    </div>
+                </div>
+                <hr>
+               
+                
                 </fieldset>
+          
+
+           
             </div>
         </form>
     </div>
@@ -488,55 +496,101 @@
         collapseContent.style.display = 'none';
    
 
-    function nextStep(step) {
-        const currentFieldset = document.getElementById('fieldset' + step);
-        const nextFieldset = document.getElementById('fieldset' + (step + 1));
-        const progressBar = document.querySelector('.progress-bar');
+        let currentStep = 1;  // Initialize current step
 
-        // Your logic to validate fields and navigate to the next step
+        document.getElementById('nextBtn').addEventListener('click', function() {
+    nextStep(currentStep);
+});
 
-        // Hide the current fieldset
-        if (currentFieldset) {
-            currentFieldset.style.display = 'none';
+function nextStep(step) {
+    const currentFieldset = document.getElementById('fieldset' + step);
+    const nextFieldset = document.getElementById('fieldset' + (step + 1));
+    const progressBar = document.querySelector('.progress-bar');
 
-            // Show the next fieldset
-            if (nextFieldset) {
-                nextFieldset.style.display = 'block';
+    // Your logic to validate fields and navigate to the next step
 
-                // Update the progress bar
-                const totalSteps = 3;
-                const percent = (step / totalSteps) * 100;
-                progressBar.style.width = percent + '%';
-                progressBar.setAttribute('aria-valuenow', percent);
-            }
+    // Hide the current fieldset
+    if (currentFieldset) {
+        currentFieldset.style.display = 'none';
 
-            // If it's the last step, change the "Next" button to "Submit"
-            if (step === 2) {
-                document.getElementById('submitBtn').style.display = 'block';
-            }
+        // Show the next fieldset
+        if (nextFieldset) {
+            nextFieldset.style.display = 'block';
+
+            // Update the progress bar
+            const totalSteps = 2;
+            const percent = (step / totalSteps) * 100;
+            progressBar.style.width = percent + '%';
+            progressBar.setAttribute('aria-valuenow', percent);
         }
     }
-
-    document.getElementById('next').addEventListener('click', function() {
-    nextStep(1);  // assuming you want to move to the next step when the button is clicked
+}
 
 
+
+function setProgressBar(curStep) {
+    var percent = ((curStep - 1) / (steps - 1)) * 100;
+    percent = Math.max(0, percent);
     
+    $(".progress-bar")
+        .css("width", percent + "%")
+        .find('.progress-text')
+        .html(percent.toFixed() + "%");
+}
+
+document.getElementById('previousBtn').addEventListener('click', function() {
+    previousStep(currentStep);
 });
 
 
-function updateProgressBar(step, totalSteps) {
-        const progressBar = document.querySelector('.progress-bar');
-        const percent = (step / totalSteps) * 100;
 
-        // Update the width and text of the progress bar
-        progressBar.style.width = percent + '%';
-        progressBar.setAttribute('aria-valuenow', percent);
-        progressBar.innerText = percent + '%';
+
+function previousStep() {
+    const currentFieldset = document.getElementById('fieldset' + currentStep);
+    const previousStep = Math.max(1, currentStep - 1);
+    const previousFieldset = document.getElementById('fieldset' + previousStep);
+    const nextFieldset = document.getElementById('fieldset' + (currentStep + 1));
+    const progressBar = document.querySelector('.progress-bar');
+
+    // Your logic to validate fields and navigate to the previous step
+
+    // Hide the current fieldset
+    if (currentFieldset) {
+        currentFieldset.style.display = 'none';
+
+        // Hide the next fieldset (second fieldset)
+        if (nextFieldset) {
+            nextFieldset.style.display = 'none';
+        }
+
+        // Show the previous fieldset
+        if (previousFieldset) {
+            previousFieldset.style.display = 'block';
+
+            // Update the progress bar
+            const totalSteps = 2;
+            const percent = ((previousStep - 1) / (totalSteps - 1)) * 100;
+            progressBar.style.width = percent + '%';
+            progressBar.setAttribute('aria-valuenow', percent);
+        }
+
+        // If it's not the first step, show the "Next" button
+        if (previousStep > 1) {
+            document.getElementById('submitBtn').style.display = 'none';
+        } else {
+            document.getElementById('submitBtn').style.display = 'block';
+        }
+
+        // Update the current step
+        currentStep = previousStep;
     }
+}
 
-    // Example: Update progress bar to 25% for the first step out of 4 steps
-    updateProgressBar(1, 4);
+
+document.getElementById('previousBtn').addEventListener('click', function() {
+    previousStep();
+});
+
     
     </script>
 <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">

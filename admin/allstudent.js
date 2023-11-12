@@ -43,6 +43,9 @@ document.addEventListener("DOMContentLoaded", () => {
     class: null,
   };
 
+
+  
+
   function generatePDFFromHTML(htmlElement) {
     // Create a new jsPDF instance
     const doc = new jsPDF({ unit: "pt" });
@@ -82,6 +85,10 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     });
   }
+  
+    
+
+
 
   // Reusable function for handling filter buttonsHumanities
   function handleFilterButtons(btns, filterType) {
@@ -89,7 +96,7 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.addEventListener("click", () => {
         const filterValue = btn.getAttribute("data-filter");
         const title = document.querySelector(".current-filter");
-
+        console.log("View Details button clicked");
         // Set the appropriate filter in the filters object
         filters[filterType] = filterValue;
 
@@ -486,6 +493,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // MODAL SECTION
   document.addEventListener("click", (event) => {
     if (event.target.classList.contains("view-details-button")) {
+      console.log("View Details button clicked");
       const button = event.target;
       const studentInfo = JSON.parse(button.getAttribute("data-student-info"));
       // Get modal elements

@@ -221,29 +221,7 @@ document.addEventListener("DOMContentLoaded", () => {
         doc.text(cpnum, 65, 164);
 
         doc.setFontSize(14);
-        doc.text("Learners Educational Background", 70, 172);
-        doc.setFontSize(12);
-        doc.text("Elementary School", 85, 180);
-        // Set the font style to bold for labels
-        doc.setFontStyle("bold");
-        doc.text(`School Name:`, 20, 188);
-        doc.text(`School Address:`, 20, 196);
-        doc.text(`Year of Completion:`, 20, 204);
-        doc.setFontStyle("normal");
-        doc.text(schnamej, 65, 188);
-        doc.text(schaddressj, 65, 196);
-        doc.text(yrcompj, 65, 204);
-
-        doc.text("Junior High School", 85, 212);
-        // Set the font style to bold for labels
-        doc.setFontStyle("bold");
-        doc.text(`School Name:`, 20, 220);
-        doc.text(`School Address:`, 20, 228);
-        doc.text(`Year of Completion:`, 20, 236);
-        doc.setFontStyle("normal");
-        // doc.text(schnamej, 65, 220);
-        // doc.text(schaddressj, 65, 228);
-        // doc.text(yrcompj, 65, 236);
+        
 
         doc.text(`Date submitted: ${date}`, 20, 276);
 

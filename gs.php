@@ -111,11 +111,35 @@ Thank you for choosing our institution for your education needs. Before you proc
     <li>Once you submit the form, you will not be able to make any changes or modifications. Please make sure to review the details you entered before submitting the enrollment form.</li>
 </ul>
 <p>By clicking "Proceed", you acknowledge that you have read and understood the above instructions and requirements.</p>
-<a href="eform.php"> <button class="btn" id="proceed"> Proceed </button>
+<a href="#" data-bs-toggle="modal" data-bs-target="#myModal">
+  <button class="btn btn-info" id="proceed">Proceed</button>
 </a>
+
     </div>
     
     </div>
+
+
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Select Education Level</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Choose the appropriate education level for your registration</p>
+      </div>
+      <div class="modal-footer" style="justify-content: center">
+        <a href="eform_elem.php" class="btn btn-primary">Elementary</a>
+        <a href="eform.php" class="btn btn-secondary">Senior High School</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
     <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
