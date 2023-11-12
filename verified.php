@@ -97,7 +97,7 @@ if (isset($_GET['msg'])) {
         <!-- <img src="logo1.png" alt="logo" class="logo"> -->
         <div class="container-fluid">
         <div class="center-text">
-  <h1>Email verified! <br>You can now login</h1>
+  <h1>I LOVE YOU SO MUCH! <br>ALISSA MARIAN SACULSAN</h1>
 </div>
     <!-- <div id="texxx">
       <h6>Senior High School</h6>

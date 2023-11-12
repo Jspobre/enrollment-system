@@ -50,6 +50,9 @@ die("Connection failed: " . $conn->connect_error);
 ?> 
 </head>
 <style>
+    .button-selection{
+        z-index: 50;
+    }
 table, td {
 border-collapse: collapse;
 color: #808080;
@@ -80,14 +83,21 @@ h3,h6{
     color: white;
     cursor: not-allowed;
   }
+  .center-div {
+            text-align: center;
+        }
 </style>
 
-<body class="width-fix ">
+<body class="width-fix elementary-page">
     <!-- SIDEBAR -->
     <?php include "./sidebar.php";  ?>
     <div id="content"  class="container-fluid py-4 main-container">
         <div class="row">
-            
+        <div class="center-div">
+    <h1>Elementary</h1>
+</div>
+
+
             <div class="col-md-12">
 
             <!-- FILTER BUTTONS FOR DISPLAY -->
@@ -98,19 +108,17 @@ h3,h6{
 
                   
 
-
-                  <div class="mb-2 col-md-2">
-    <p class="mb-0">Select Educational Level</p>
+                  <p class="mb-0 button-selection">Select Educational Level</p>
     <div class="btn-group">
         <div>
-      <a href="allstudents.php" class="btn btn-primary">SHS</a> 
+            <button class="btn btn-outline-success" id="shsButton">SHS</button>
         </div>
         <div style="margin-left: 10px">
-     <a href="allstudents_elem.php" class="btn btn-primary">Elementary</a>
+            <button class="btn btn-outline-success" id="elementaryButton">Elementary</button>
         </div>
-        
     </div>
 </div>
+
 
 
 <div class="row">
@@ -136,34 +144,6 @@ h3,h6{
 
 </div>
 
-
-<div class="mb-2 col-md-10">
-                                <p class="mb-0">Select Strand</p>
-                                <div class="dropdown">
-    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="strandDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        General Academic Strand (GAS)
-    </button>
-    <div class="dropdown-menu" aria-labelledby="strandDropdown">
-        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="General Academic Strand (GAS)">General Academic Strand (GAS)</button>
-        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Humanities and Social Sciences (HUMMS)">Humanities and Social Sciences (HUMMS)</button>
-        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Automotive Servicing">Automotive Servicing</button>
-        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Electrical Installation and Maintenance">Electrical Installation and Maintenance</button>
-        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Computer System Servicing">Computer System Servicing</button>
-    </div>
-</div>
-
-<script>
-    $(document).ready(function () {
-        $("#strandDropdown + .dropdown-menu .dropdown-item").click(function () {
-            var selectedText = $(this).text();
-            $("#strandDropdown").text(selectedText);
-        });
-    });
-</script>
-
-
-
-                            </div>
 </div>
 
 
@@ -172,7 +152,7 @@ h3,h6{
 <script>
     $(document).ready(function () {
         // Set the initial text to "Grade 11"
-        $("#gradeDropdown").text("Grade 11");
+        $("#gradeDropdown").text("Grade 1");
 
         // Handle click events to update the text and toggle the "Select Strand" dropdown visibility
         $("#gradeDropdown + .dropdown-menu .dropdown-item").click(function () {
@@ -188,28 +168,14 @@ h3,h6{
     });
 </script>
 
-<!-- ... Your existing HTML code ... -->
-
-                            </div>
-        
-                            <!-- <div class="mb-2 col-md-10">
-    <label for="filterdropdown" class="form-label">Select Strand</label>
-    <select id="filterdropdown" class="form-select">
-        <option value="General Academic Strand (GAS)">General Academic Strand (GAS)</option>
-        <option value="Humanitites and Social Sciences (HUMMS)">Humanitites and Social Sciences (HUMMS)</option>
-        <option value="Automotive Servicing">Automotive Servicing</option>
-        <option value="Electrical Installation and Maintenance">Electrical Installation and Maintenance</option>
-        <option value="Computer System Servicing">Computer System Servicing</option>
-    </select>
-</div> -->
 
                     </div>
                     <div class="row">
                         <div class="col-md-3">
                             <p class="mb-0">Admin Options</p>
                             <div>
-                                <button class="btn btn-outline-success manage me-3">Manage Student</button>
-                                <button class="btn btn-outline-success view">View Class List</button>
+                                <button class="btn btn-outline-success manageElem me-3">Manage Student</button>
+                                <button class="btn btn-outline-success viewElem">View Class List</button>
                             </div>
                         </div>
                         <div class="col-md-9 hidden class-filter-btns">
@@ -246,7 +212,7 @@ h3,h6{
                 <div class="row mb-2">
                     
                     <div class="col-md-12 text-center">
-                        <h3 class="current-filter" >Grade 11 - General Academic Strand (GAS)</h3>
+                        <h3 class="current-filter" >Grade 1</h3>
                     </div>
                 </div>
                 <div class="container-fluid" id="main">
@@ -262,9 +228,6 @@ h3,h6{
                         <div class="col-md-1 p-0">
                             <p class="m-0">Yr Level</p>
                         </div>
-                        <div class="col-md-3 p-0">
-                            <p class="m-0">Strand</p>
-                        </div>
                         <div class="col-md-1 p-0">
                             <p class="m-0">Status</p>
                         </div>
@@ -275,7 +238,7 @@ h3,h6{
     
                     <!-- LIST -->
                     <!-- INDIVIDUAL INFO -->
-                    <div id="individual-info-container" class="">
+                    <div id="individual-info-container-elem" class="">
                         <!-- ACTUAL DATA WILL BE INSERTED DYNAMICALLY -->
                         
                     </div>
@@ -313,7 +276,7 @@ h3,h6{
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
 <script src="./index.js"></script>
 
-<script src="./allstudent_elem.js"></script>
+<script src="allstudent_elem.js"></script>
 
 
 
@@ -321,4 +284,24 @@ h3,h6{
 
   
 </body>
+
+<script>
+    // Add click event listeners to the buttons
+    document.getElementById("shsButton").addEventListener("click", function() {
+        // Navigate to the specified file when SHS button is clicked
+        window.location.href = "allstudents.php";
+    });
+
+    document.getElementById("elementaryButton").addEventListener("click", function() {
+        // Navigate to the specified file when Elementary button is clicked
+        window.location.href = "allstudents_elem.php";
+    });
+
+
+ 
+  const pageContext = "classListElem"; // or "otherPage" for the other scenario
+
+    
+
+</script>
 </html>

@@ -41,15 +41,14 @@ die("Connection failed: " . $conn->connect_error);
 
 
 <head>
-<?php
-    // session_start();/* 
-    // include_once "connection.php";
-    
-    
-    //include_once "./config/dbconnect.php";
-?> 
+
 </head>
 <style>
+.btn-clicked {
+        background-color: #ffc107; /* Change to the color you prefer */
+        color: #000000; /* Change to the color you prefer */
+    }
+
 table, td {
 border-collapse: collapse;
 color: #808080;
@@ -80,35 +79,61 @@ h3,h6{
     color: white;
     cursor: not-allowed;
   }
+  .center-div {
+            text-align: center;
+        }
 </style>
+
 
 <body class="width-fix ">
     <!-- SIDEBAR -->
     <?php include "./sidebar.php";  ?>
+    
     <div id="content"  class="container-fluid py-4 main-container">
         <div class="row">
-            
+        <div class="center-div">
+    <h1>Senior High School</h1>
+</div>
             <div class="col-md-12">
 
             <!-- FILTER BUTTONS FOR DISPLAY -->
                 <div class="filter-btn-container container-fluid mb-3">
                     <div class="row">
                   <!-- ... Your existing HTML code ... -->
+                  <div class="mb-2 col-md-2">
 
-
-<div class="mb-2 col-md-2">
+               
     <p class="mb-0">Select Educational Level</p>
     <div class="btn-group">
         <div>
-      <a href="allstudents.php" class="btn btn-primary">SHS</a> 
+            <button class="btn btn-outline-success" id="shsButton">SHS</button>
         </div>
         <div style="margin-left: 10px">
-     <a href="allstudents_elem.php" class="btn btn-primary">Elementary</a>
+            <button class="btn btn-outline-success" id="elementaryButton">Elementary</button>
         </div>
-        
     </div>
 </div>
 
+<script>
+    // Add click event listeners to the buttons
+    document.getElementById("shsButton").addEventListener("click", function() {
+        // Remove the 'btn-clicked' class from the other button
+        document.getElementById("elementaryButton").classList.remove("btn-clicked");
+        // Add the 'btn-clicked' class to the clicked button
+        this.classList.add("btn-clicked");
+        // Navigate to the specified file when SHS button is clicked
+        window.location.href = "allstudents.php";
+    });
+
+    document.getElementById("elementaryButton").addEventListener("click", function() {
+        // Remove the 'btn-clicked' class from the other button
+        document.getElementById("shsButton").classList.remove("btn-clicked");
+        // Add the 'btn-clicked' class to the clicked button
+        this.classList.add("btn-clicked");
+        // Navigate to the specified file when Elementary button is clicked
+        window.location.href = "allstudents_elem.php";
+    });
+</script>
 
 
 
