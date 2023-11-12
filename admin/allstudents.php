@@ -104,14 +104,25 @@ h3,h6{
 
                
     <p class="mb-0">Select Educational Level</p>
-    <div class="btn-group">
+    <div class="dropdown-grade">
+        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="gradeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Select a Grade
+        </button>
+        <div class="dropdown-menu" aria-labelledby="gradeDropdown">
+            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 11">Grade 11</button>
+            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 12">Grade 12</button>
+     
+        
+        </div>
+    </div>
+    <!-- <div class="btn-group">
         <div>
             <button class="btn btn-outline-success" id="shsButton">SHS</button>
         </div>
         <div style="margin-left: 10px">
             <button class="btn btn-outline-success" id="elementaryButton">Elementary</button>
         </div>
-    </div>
+    </div> -->
 </div>
 
 <script>

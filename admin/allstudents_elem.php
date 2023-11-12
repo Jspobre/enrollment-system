@@ -50,9 +50,7 @@ die("Connection failed: " . $conn->connect_error);
 ?> 
 </head>
 <style>
-    .button-selection{
-        z-index: 50;
-    }
+    
 table, td {
 border-collapse: collapse;
 color: #808080;
@@ -108,8 +106,8 @@ h3,h6{
 
                   
 
-                  <p class="mb-0 button-selection">Select Educational Level</p>
-    <div class="btn-group">
+             <p class="mb-0 ">Select Educational Level</p>
+    <div class="btn-group button-selection">
         <div>
             <button class="btn btn-outline-success" id="shsButton">SHS</button>
         </div>
