@@ -41,16 +41,10 @@ die("Connection failed: " . $conn->connect_error);
 
 
 <head>
-<?php
-    // session_start();/* 
-    // include_once "connection.php";
-    
-    
-    //include_once "./config/dbconnect.php";
-?> 
+
 </head>
 <style>
-    
+
 table, td {
 border-collapse: collapse;
 color: #808080;
@@ -106,15 +100,16 @@ h3,h6{
 
                   
 
-             <p class="mb-0 ">Select Educational Level</p>
-    <div class="btn-group button-selection">
-        <div>
-            <button class="btn btn-outline-success" id="shsButton">SHS</button>
-        </div>
-        <div style="margin-left: 10px">
-            <button class="btn btn-outline-success" id="elementaryButton">Elementary</button>
-        </div>
-    </div>
+                  <p class="mb-0">Select Educational Level</p>
+ <div class="dropdown-grade">
+  <button class="btn btn-outline-primary dropdown-toggle" type="button" id="gradeDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Select Educational Level
+  </button>
+  <div class="dropdown-menu" aria-labelledby="gradeDropdown">
+    <button class="dropdown-item" id="shsButton">Senior High School</button>
+    <button class="dropdown-item" id="elementaryButton">Elementary</button>
+  </div>
+</div>
 </div>
 
 
@@ -128,12 +123,12 @@ h3,h6{
             Select a Grade
         </button>
         <div class="dropdown-menu" aria-labelledby="gradeDropdown">
-            <button class="dropdown-item filter-btn filter-elem-grade-btn " data-filter="Grade 1">Grade 1</button>
-            <button class="dropdown-item filter-btn filter-elem-grade-btn"  data-filter="Grade 2">Grade 2</button>
-            <button class="dropdown-item filter-btn filter-elem-grade-btn " data-filter="Grade 3">Grade 3</button>
-            <button class="dropdown-item filter-btn filter-elem-grade-btn " data-filter="Grade 4">Grade 4</button>
-            <button class="dropdown-item filter-btn filter-elem-grade-btn" data-filter="Grade 5">Grade 5</button>
-            <button class="dropdown-item filter-btn filter-elem-grade-btn " data-filter="Grade 6">Grade 6</button>
+            <button class="dropdown-item filter-btn filter-elem-grade-btn " data-filter="Grade 1 (St. Agnes)">Grade 1 (St. Agnes)</button>
+            <button class="dropdown-item filter-btn filter-elem-grade-btn"  data-filter="Grade 2 (St. Agatha)">Grade 2  St. Agatha</button>
+            <button class="dropdown-item filter-btn filter-elem-grade-btn " data-filter="Grade 3 (St. Monica)">Grade 3 (St. Monica)</button>
+            <button class="dropdown-item filter-btn filter-elem-grade-btn " data-filter="Grade 4 (St. Michael)">Grade 4 (St. Michael)</button>
+            <button class="dropdown-item filter-btn filter-elem-grade-btn" data-filter="Grade 5 (St. James)">Grade 5 (St. James)</button>
+            <button class="dropdown-item filter-btn filter-elem-grade-btn " data-filter="Grade 6 (St. Claire)">Grade 6 (St. Claire)</button>
 
      
         
@@ -150,7 +145,7 @@ h3,h6{
 <script>
     $(document).ready(function () {
         // Set the initial text to "Grade 11"
-        $("#gradeDropdown").text("Grade 1");
+        $("#gradeDropdown").text("Grade 1 (St. Agnes)");
 
         // Handle click events to update the text and toggle the "Select Strand" dropdown visibility
         $("#gradeDropdown + .dropdown-menu .dropdown-item").click(function () {
@@ -164,6 +159,9 @@ h3,h6{
             }
         });
     });
+    
+    
+ 
 </script>
 
 
@@ -186,8 +184,8 @@ h3,h6{
     <div class="dropdown-menu" aria-labelledby="sectionDropdown">
         <button class="dropdown-item class" data-filter="A">Section A</button>
         <button class="dropdown-item class" data-filter="B">Section B</button>
-        <button class="dropdown-item class" data-filter="C">Section C</button>
-        <button class="dropdown-item class" data-filter="D">Section D</button>
+        <!-- <button class="dropdown-item class" data-filter="C">Section C</button>
+        <button class="dropdown-item class" data-filter="D">Section D</button> -->
     </div>
 </div>
 
@@ -198,6 +196,24 @@ h3,h6{
             $("#sectionDropdown").text(selectedText);
         });
     });
+    
+     $(document).ready(function () {
+        // Set the initial text to "Grade 11"
+        $("#gradeDropdown1").text("Elementary");
+
+        // Handle click events to update the text and toggle the "Select Strand" dropdown visibility
+        $("#gradeDropdown + .dropdown-menu .dropdown-item").click(function () {
+            var selectedText = $(this).text();
+            $("#gradeDropdown").text(selectedText);
+
+            if (selectedText === "Grade 11" || selectedText === "Grade 12") {
+                $("#strandDropdown").show();
+            } else {
+                $("#strandDropdown").hide();
+            }
+        });
+    });
+    
 </script>
 
 </div>
@@ -210,7 +226,7 @@ h3,h6{
                 <div class="row mb-2">
                     
                     <div class="col-md-12 text-center">
-                        <h3 class="current-filter" >Grade 1</h3>
+                        <h3 class="current-filter" >Grade 1 (St. Agnes)</h3>
                     </div>
                 </div>
                 <div class="container-fluid" id="main">
@@ -274,7 +290,7 @@ h3,h6{
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
 <script src="./index.js"></script>
 
-<script src="allstudent_elem.js"></script>
+<script src="./allstudent_elem.js"></script>
 
 
 

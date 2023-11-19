@@ -146,7 +146,7 @@
                     </div>
                     <div class="col-sm-12  col-lg-3 my-2">
                         <label for="height" class="form-label">Height</label>
-                        <input type="number" class="form-control" id="height" name="height" placeholder="Enter height (in)" required>
+                        <input type="number" class="form-control" id="height" name="height" placeholder="Enter height (ft)" required>
                     </div>
                     <div class="col-sm-12  col-lg-3 my-2">
                         <label for="weight" class="form-label">Weight</label>
@@ -175,7 +175,7 @@
                         <input type="text" class="form-control " id="place_birth" name="place_birth" placeholder="Enter place of birth" required>
                     </div>
                     <div class="col-sm-12  col-lg-3 my-2">
-                        <label for="sex" class="form-label">Sex</label>
+                        <label for="sex" class="form-label">Gender</label>
                         <select class="form-select form-control " aria-label="Large select" name="sex" id="sex" > 
                             <option value="Male" selected>Male</option>
                             <option value="Female">Female</option>  

@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const setInitialFiltersElem = () => {
     const grade1Button = document.querySelector(
-      ".filter-elem-grade-btn[data-filter='Grade 1']"
+      ".filter-elem-grade-btn[data-filter='Grade 1 (St. Agnes)']"
     );
     
     const title = document.querySelector(".current-filter");
@@ -173,20 +173,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Add the "active" class to the clicked filter button
         btn.classList.add("active");
-
         if (isClassList) {
-          // Check if it's an elementary page
-          const isElementary = document.body.classList.contains("elementary-page");
-        
-          if (isElementary) {
-            // Display title without strand for elementary
-            title.textContent = `${filters.gradeLevel} - Section ${filters.class}`;
-          } else {
-            // Display title with strand for other pages
-            title.textContent = `${filters.gradeLevel} - ${filters.strand} - Section ${filters.class}`;
-          }
+          title.textContent = `${filters.gradeLevel} - ${filters.strand} - Section ${filters.class}`;
         } else {
-          title.textContent = `${filters.gradeLevel} - Section ${filters.class}`;
+          title.textContent = `${filters.gradeLevel} - ${filters.strand}`;
         }
         
         

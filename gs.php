@@ -100,18 +100,17 @@
         <img src="logo1.png"  style="width: 70px;">
         <h3>Our Lady of the Roses Montessori Learning Center</h3></div>
         <br>
-        <p>Good Day! Welcome to Our Lady of Roses Montessori Learning Center -  Senior High School Online Enrollment System
-Thank you for choosing our institution for your education needs. Before you proceed with the enrollment process, please take note of the following instructions and requirements:</p>
+        <p>Good Day! Welcome to Our Lady of Roses Montessori Learning Center Online Enrollment System. Thank you for choosing our institution for your education needs. Before you proceed with the enrollment process, please take note of the following instructions and requirements:</p>
 <ul class="bullet-paragraph">
     <li>To use our online enrollment system, please make sure you have a stable internet connection to avoid any issues during the submission process.</li>
     <li>Please prepare the necessary documents such as your PSA/NSO Birth Certificate ,High School Report Card (Form 138), Completion Form / Certificate from JHS and 1×1 picture for your ID (white background). (Note: the files should be in JPG or PDF)</li>
     <li>Once you start the enrollment process, you will be asked to provide personal information such as your name, address, and contact details, etc.</li>
     <li>All fields are required. Please ensure that you have filled them in accurately.</li>
-    <li>Only PDF file formats are accepted for the attachments. Any other format will not be processed.</li>
+    <li>Only PDF/JPG file formats are accepted for the attachments. Any other format will not be processed.</li>
     <li>Once you submit the form, you will not be able to make any changes or modifications. Please make sure to review the details you entered before submitting the enrollment form.</li>
 </ul>
 <p>By clicking "Proceed", you acknowledge that you have read and understood the above instructions and requirements.</p>
-<a href="#" data-bs-toggle="modal" data-bs-target="#myModal">
+<a href="eform_elem.php" >
   <button class="btn btn-info" id="proceed">Proceed</button>
 </a>
 
@@ -119,7 +118,7 @@ Thank you for choosing our institution for your education needs. Before you proc
     
     </div>
 
-
+<!-- 
     <div class="modal" tabindex="-1" role="dialog" id="myModal">
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
@@ -136,7 +135,7 @@ Thank you for choosing our institution for your education needs. Before you proc
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
 

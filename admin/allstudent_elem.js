@@ -13,35 +13,35 @@ document.addEventListener("DOMContentLoaded", () => {
     let isClassList = false;
   
     // Function to set the initial filters
-    const setInitialFilters = () => {
-      const grade11Button = document.querySelector(
-        ".filter-grade-btn[data-filter='Grade 11']"
-      );
-      const gasButton = document.querySelector(
-        ".filter-strand-btn[data-filter='General Academic Strand (GAS)']"
-      );
+    // const setInitialFilters = () => {
+    //   const grade11Button = document.querySelector(
+    //     ".filter-grade-btn[data-filter='Grade 11']"
+    //   );
+    //   const gasButton = document.querySelector(
+    //     ".filter-strand-btn[data-filter='General Academic Strand (GAS)']"
+    //   );
   
-      const title = document.querySelector(".current-filter");
-      const manageBtn = document.querySelector(".manage");
+    //   const title = document.querySelector(".current-filter");
+    //   const manageBtn = document.querySelector(".manage");
   
-      // Programmatically click the Grade 11 and GAS buttons
-      grade11Button.click();
-      gasButton.click();
-      // Add the "active" class to the Grade 11 and GAS buttons
-      manageBtn.classList.add("active");
-      grade11Button.classList.add("active");
-      gasButton.classList.add("active");
+    //   // Programmatically click the Grade 11 and GAS buttons
+    //   grade11Button.click();
+    //   gasButton.click();
+    //   // Add the "active" class to the Grade 11 and GAS buttons
+    //   manageBtn.classList.add("active");
+    //   grade11Button.classList.add("active");
+    //   gasButton.classList.add("active");
   
-      title.textContent = `${grade11Button.textContent} - ${gasButton.textContent}`;
-    };
+    //   title.textContent = `${grade11Button.textContent} - ${gasButton.textContent}`;
+    // };
   
     // Call the function when the page loads
-    window.addEventListener("load", setInitialFilters);
+    // window.addEventListener("load", setInitialFilters);
   
   
     const setInitialFiltersElem = () => {
       const grade1Button = document.querySelector(
-        ".filter-elem-grade-btn[data-filter='Grade 1']"
+        ".filter-elem-grade-btn[data-filter='Grade 1 (St. Agnes)']"
       );
       
       const title = document.querySelector(".current-filter");
@@ -1021,8 +1021,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <p class="mb-1"><strong>Year Level:</strong> ${
                   studentInfo.grlevel
                 }</p>
-                <p class="mb-1"><strong>Track:</strong> ${studentInfo.track}</p>
-                <p class="mb-1"><strong>Strand:</strong> ${studentInfo.strand}</p>
+                
                 <p class="mb-1"><strong>Civil Status:</strong> ${
                   studentInfo.cstatus
                 }</p>
@@ -1182,18 +1181,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 Section B
               </label>
             </div>
-            <div class="form-check me-3">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" value="C">
-              <label class="form-check-label" for="flexRadioDefault3">
-                Section C
-              </label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault4" value="D">
-              <label class="form-check-label" for="flexRadioDefault4">
-                Section D
-              </label>
-            </div>
+          
             
           </form>
       `;

@@ -110,11 +110,30 @@
     <div>
       <h6>Senior High School</h6>
   <p>Online Enrollment System</p>
-  <a href="gs.php"><button type="button " class="btn get-started">
+  <a href="#" data-bs-toggle="modal" data-bs-target="#myModal"><button type="button " class="btn get-started">
            Get Started
         </button></a>  
 </div>
     </div>
+
+
+    <div class="modal" tabindex="-1" role="dialog" id="myModal">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Select Education Level</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <!-- <div class="modal-body">
+        <p style="font-style: arial">Choose the appropriate education level for your registration</p>
+      </div> -->
+      <div class="modal-footer" style="justify-content: center">
+        <a href="gs.php" class="btn btn-primary">Elementary</a>
+        <a href="gs2.php" class="btn btn-secondary">Senior High School</a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
         <div class="modal-dialog">

@@ -146,7 +146,7 @@
                     </div>
                     <div class="col-sm-12  col-lg-3 my-2">
                         <label for="height" class="form-label">Height</label>
-                        <input type="number" class="form-control" id="height" name="height" placeholder="Enter height (in)" required>
+                        <input type="number" class="form-control" id="height" name="height" placeholder="Enter height (ft)" required>
                     </div>
                     <div class="col-sm-12  col-lg-3 my-2">
                         <label for="weight" class="form-label">Weight</label>
@@ -175,7 +175,7 @@
                         <input type="text" class="form-control " id="place_birth" name="place_birth" placeholder="Enter place of birth" required>
                     </div>
                     <div class="col-sm-12  col-lg-3 my-2">
-                        <label for="sex" class="form-label">Sex</label>
+                        <label for="sex" class="form-label">Gender</label>
                         <select class="form-select form-control " aria-label="Large select" name="sex" id="sex" > 
                             <option value="Male" selected>Male</option>
                             <option value="Female">Female</option>  
@@ -245,14 +245,14 @@
                 <div class="colapse" id="collapseContent">
                 <div class="card card-body">
                 <p>Since you are an incoming Grade 11 student, there are important documents needed.<br>Please upload the following documents in pdf form.</p>
-                <div class="row">
+                <!-- <div class="row">
                     <div class="col-3 my-2 ">
                 <label for="complform" class="form-label">Completion Form / Certificate JHS</label>
                     </div>
                     <div class="col">
                             <input type="file" name="complform" id="complform">
                     </div>
-                </div>
+                </div> -->
                 <div class="row">
                     <div class="col-3 my-2 ">
                 <label for="pics" class="form-label">1x1 picture</label>
@@ -461,17 +461,19 @@
 
         const grlevel = document.getElementById('grlevel');
         const collapseContent = document.getElementById('collapseContent');
-        const complform = document.getElementById('complform')
+
         const pics = document.getElementById('pics')
 
         grlevel.addEventListener('change', function () {
-        if (grlevel.value === 'Grade 1' ) {
+        if (grlevel.value === 'Grade 1') {
+            collapseContent.style.display = 'block'; // Show collapse
+          
+            pics.setAttribute("required", "")
+        } else {
             collapseContent.style.display = 'none'; // Hide collapse
-            complform.removeAttribute("required")
+       
             pics.removeAttribute("required")
-        } 
-        
-        
+        }
         });
 
         // Hide collapse content initially

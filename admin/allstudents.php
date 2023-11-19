@@ -10,6 +10,12 @@ die("Connection failed: " . $conn->connect_error);
 
 
 
+<?php
+include_once "connection.php";
+?>
+
+
+
 <!DOCTYPE html lang=en>
 <html>
 
@@ -104,25 +110,25 @@ h3,h6{
 
                
     <p class="mb-0">Select Educational Level</p>
-    <div class="dropdown-grade">
-        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="gradeDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Select a Grade
-        </button>
-        <div class="dropdown-menu" aria-labelledby="gradeDropdown">
-            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 11">Grade 11</button>
-            <button class="dropdown-item filter-btn filter-grade-btn" data-filter="Grade 12">Grade 12</button>
-     
-        
-        </div>
-    </div>
-    <!-- <div class="btn-group">
-        <div>
-            <button class="btn btn-outline-success" id="shsButton">SHS</button>
-        </div>
-        <div style="margin-left: 10px">
-            <button class="btn btn-outline-success" id="elementaryButton">Elementary</button>
-        </div>
-    </div> -->
+<div class="dropdown-grade">
+  <button class="btn btn-outline-primary dropdown-toggle" type="button" id="gradeDropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Select Educational Level
+  </button>
+  <div class="dropdown-menu" aria-labelledby="gradeDropdown">
+    <button class="dropdown-item" id="shsButton">Senior High School</button>
+    <button class="dropdown-item" id="elementaryButton">Elementary</button>
+  </div>
+</div>
+
+<!--        <div class="btn-group">-->
+<!--  <button type="button" class="btn btn-outline-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">-->
+<!--    Select Educational Level-->
+<!--  </button>-->
+<!--  <div class="dropdown-menu">-->
+<!--    <button class="dropdown-item" id="shsButton">SHS</button>-->
+<!--    <button class="dropdown-item" id="elementaryButton">Elementary</button>-->
+<!--  </div>-->
+<!--</div>-->
 </div>
 
 <script>
@@ -175,11 +181,11 @@ h3,h6{
         General Academic Strand (GAS)
     </button>
     <div class="dropdown-menu" aria-labelledby="strandDropdown">
-        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="General Academic Strand (GAS)">General Academic Strand (GAS)</button>
-        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Humanities and Social Sciences (HUMMS)">Humanities and Social Sciences (HUMMS)</button>
-        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Automotive Servicing">Automotive Servicing</button>
-        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Electrical Installation and Maintenance">Electrical Installation and Maintenance</button>
-        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Computer System Servicing">Computer System Servicing</button>
+        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="General Academic Strand (GAS)">General Academic Strand (GAS) - St. Michael</button>
+        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Humanities and Social Sciences (HUMMS)">Humanities and Social Sciences (HUMMS) - St. Thomas</button>
+        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Automotive Servicing">Automotive Servicing - St. Joseph</button>
+        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Electrical Installation and Maintenance">Electrical Installation and Maintenance - St. Padre Pio</button>
+        <button class="dropdown-item filter-btn filter-strand-btn" data-filter="Computer System Servicing">Computer System Servicing - St. Lucy</button>
     </div>
 </div>
 
@@ -212,6 +218,13 @@ h3,h6{
                 $("#strandDropdown").hide();
             }
         });
+    });
+    
+     $(document).ready(function () {
+        // Set the initial text to "Grade 11"
+        $("#gradeDropdown1").text("Senior High School");
+
+   
     });
     document.addEventListener("DOMContentLoaded", () => {
     const grade1Button = document.getElementById("grade1Button");
@@ -321,7 +334,7 @@ h3,h6{
                 <div class="row mb-2">
                     
                     <div class="col-md-12 text-center">
-                        <h3 class="current-filter" >Grade 11 - General Academic Strand (GAS)</h3>
+                        <h3 class="current-filter" >Grade 11 - General Academic Strand (GAS) -  St. Michael</h3>
                     </div>
                 </div>
                 <div class="container-fluid" id="main">
